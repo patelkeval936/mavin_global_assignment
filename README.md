@@ -17,8 +17,15 @@
 *  dart_numerics
 *  google_fonts
 
+_____________
+
+### Link to download APK (google drive link) : 
+
+https://drive.google.com/file/d/17WE7JycsceUXHCzt5hwQM_Yboo25_dEU/view?usp=sharing
 
 ______________
+
+### App Demo : 
 
 https://github.com/patelkeval936/mavin_global_assignment/assets/68424914/9733192a-7782-4c26-b41e-6bfd517fce7f
 
