@@ -1,16 +1,30 @@
 # mavin_global_assignment
 
-A new Flutter project.
+### Architecture & Pattern : 
+* Used CLEAN architecture with BLoC Pattern
+* Used get_it for dependency injection
 
-## Getting Started
+### Approaches used :
+* Divided app into 2 main sections
+* 1. Single input functions -> functions where there is no need of large dataset as input
+* 2. Multi input Functions -> bigger dataset is passed as input with other parameters
 
-This project is a starting point for a Flutter application.
+### Libraries Used :
+*  cupertino_icons
+*  bloc
+*  equatable
+*  flutter_bloc
+*  get_it:
+*  intl:
+*  dart_numerics
+*  google_fonts
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+________________
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+
+## Contact Me :
+patelkeval936@gmail.com
+
++91 7567781104
+
