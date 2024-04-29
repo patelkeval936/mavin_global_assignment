@@ -1,0 +1,493 @@
+{
+  "functions": [
+    {
+      "name": "DATE",
+      "category": "Date and time",
+      "description": "Returns the serial number of a particular date",
+      "definition": "DATE(2024/12/30) ,\nDate Format : YYYY/MM/DD",
+      "output": "30/12/2024",
+      "isDBFunction": false
+    },
+    {
+      "name": "DATEDIF",
+      "category": "Date and time",
+      "description": "Calculates the number of days, months, or years between two dates. This function is useful in formulas where you need to calculate an age.",
+      "isDBFunction": false,
+      "definition": "DATEDIF(startDate,endData,unit) ,\nDate Format : YYYY/MM/DD",
+      "output": "DATEDIF(2023/12/30,2024/12/30,Y) -> 2"
+    },
+    {
+      "name": "DATEVALUE",
+      "category": "Date and time",
+      "description": "Converts a date in the form of text to a serial number",
+      "isDBFunction": false,
+      "definition": "DATEVALUE(date) ,\nDate Format : YYYY/MM/DD",
+      "output": "DATEVALUE(2024/12/30) -> 3452"
+    },
+    {
+      "name": "DAVERAGE",
+      "category": "Database",
+      "description": "Returns the average of selected database entries",
+      "definition": "DAVERAGE(field, criteria)",
+      "output": "DAVERAGE(DATA,>5) -> 10",
+      "isDBFunction": true
+    },
+    {
+      "name": "DAY",
+      "category": "Date and time",
+      "description": "Converts a serial number to a day of the month",
+      "isDBFunction": false,
+      "definition": "DAY(date) \nDate Format : YYYY/MM/DD",
+      "output": "DAY(2024/12/15) -> 15"
+    },
+    {
+      "name": "DAYS",
+      "category": "Date and time",
+      "description": "Returns the number of days between two dates",
+      "isDBFunction": false,
+      "definition": "DAYS(startDate,endDate) \nDate Format : YYYY/MM/DD",
+      "output": "DAYS(2023/12/30,2024/12/30) -> 365"
+    },
+    {
+      "name": "DAYS360",
+      "category": "Date and time",
+      "description": "Calculates the number of days between two dates based on a 360-day year",
+      "isDBFunction": false,
+      "definition": "DAYS360(startDate,endDate) \nDate Format : YYYY/MM/DD",
+      "output": "DAYS360(2023/12/30,2024/12/30) -> 360"
+    },
+    {
+      "name": "DB",
+      "category": "Financial",
+      "description": "Returns the depreciation of an asset for a specified period by using the fixed-declining balance method",
+      "isDBFunction": false,
+      "definition": "DB(cost, salvage, life, period, [month])",
+      "output": "DB(100000, 10000, 6, 1, 7) -> 186,083.33"
+    },
+    {
+      "name": "DBCS",
+      "category": "Text",
+      "description": "Changes half-width (single-byte) English letters or katakana within a character string to full-width (double-byte) characters",
+      "isDBFunction": false,
+      "definition": "DBCS(text)",
+      "output": "DBCS(EXCEL) -> EXCEL"
+    },
+    {
+      "name": "DCOUNT",
+      "category": "Database",
+      "description": "Counts the cells that contain numbers in a database",
+      "isDBFunction": true,
+      "definition": "DCOUNT(field, criteria)",
+      "output": "DCOUNT(DATA,>10)"
+    },
+    {
+      "name": "DCOUNTA",
+      "category": "Database",
+      "description": "Counts nonblank cells in a database",
+      "isDBFunction": true,
+      "definition": "DCOUNTA(field, criteria)",
+      "output": "DCOUNTA(DATA) -> 2"
+    },
+    {
+      "name": "DDB",
+      "category": "Financial",
+      "description": "Returns the depreciation of an asset for a specified period by using the double-declining balance method or some other method that you specify",
+      "isDBFunction": false,
+      "definition": "DDB(cost, salvage, life, period)",
+      "output": "DDB(2400,300,10,10) -> 22.12"
+    },
+    {
+      "name": "DEC2BIN",
+      "category": "Engineering",
+      "description": "Converts a decimal number to binary",
+      "isDBFunction": false,
+      "definition": "DEC2BIN(number, places) ",
+      "output": "DEC2BIN(47,8) -> 00101111"
+    },
+    {
+      "name": "DEC2HEX",
+      "category": "Engineering",
+      "description": "Converts a decimal number to hexadecimal",
+      "isDBFunction": false,
+      "definition": "DEC2HEX(number, places)",
+      "output": "DEC2HEX(100,4) -> 0064"
+    },
+    {
+      "name": "DEC2OCT",
+      "category": "Engineering",
+      "description": "Converts a decimal number to octal",
+      "isDBFunction": false,
+      "definition": "DEC2OCT(number, places)",
+      "output": "DEC2OCT(58,3) -> 072"
+    },
+    {
+      "name": "DECIMAL",
+      "category": "Math and trigonometry",
+      "description": "Converts a text representation of a number in a given base into a decimal number",
+      "isDBFunction": false,
+      "definition": "DECIMAL(text, radix)",
+      "output": "DECIMAL(zap,36) -> 45745"
+    },
+    {
+      "name": "DEGREES",
+      "category": "Math and trigonometry",
+      "description": "Converts radians to degrees",
+      "isDBFunction": false,
+      "definition": "DEGREES(angle)",
+      "output": "DEGREES(1.047197551) -> 59.99"
+    },
+    {
+      "name": "DELTA",
+      "category": "Engineering",
+      "description": "Tests whether two values are equal",
+      "isDBFunction": false,
+      "definition": "DELTA(number1, [number2])",
+      "output": "DELTA(5, 4) -> 0"
+    },
+    {
+      "name": "DEVSQ",
+      "category": "Statistical",
+      "description": "Returns the sum of squares of deviations",
+      "isDBFunction": false,
+      "definition": "DEVSQ(number1, [number2], ...)",
+      "output": "DEVSQ(3,4,5)"
+    },
+    {
+      "name": "DGET",
+      "category": "Database",
+      "description": "Extracts from a database a single record that matches the specified criteria",
+      "isDBFunction": true,
+      "definition": "DGET(field, criteria)",
+      "output": "DGET(DATA,>10) -> 20"
+    },
+    {
+      "name": "DISC",
+      "category": "Financial",
+      "description": "Returns the discount rate for a security",
+      "isDBFunction": false,
+      "definition": "DISC(settlement, maturity, pr, redemption, basis)",
+      "output": "DISC(2023/01/01,2024/01/01, 95, 100, 1) -> 0.0526\nDate Format : YYYY/MM/DD"
+    },
+    {
+      "name": "DMAX",
+      "category": "Database",
+      "description": "Returns the maximum value from selected database entries",
+      "isDBFunction": true,
+      "definition": "DMAX(field, criteria) ",
+      "output": "DMAX(DATA,>10) -> 20"
+    },
+    {
+      "name": "DMIN",
+      "category": "Database",
+      "description": "Returns the minimum value from selected database entries",
+      "isDBFunction": true,
+      "definition": "DMIN(field, criteria)",
+      "output": "DMIN(DATA,>10) -> 11"
+    },
+    {
+      "name": "DOLLAR",
+      "category": "Text",
+      "description":
+      "Converts a number to text, using the $ (dollar) currency format",
+      "isDBFunction": false,
+      "definition": "DOLLAR(number, [decimals])",
+      "output": "DOLLAR(12345.67, 2) -> $12345.68"
+    },
+    {
+      "name": "DOLLARDE",
+      "category": "Financial",
+      "description": "Converts a dollar price, expressed as a fraction, into a dollar price, expressed as a decimal number",
+      "isDBFunction": false,
+      "definition": "DOLLARDE(fractional_dollar, fraction)",
+      "output": "DOLLARDE(1.1,32) -> 1.13125"
+    },
+    {
+      "name": "DOLLARFR",
+      "category": "Financial",
+      "description": "Converts a dollar price, expressed as a decimal number, into a dollar price, expressed as a fraction",
+      "isDBFunction": false,
+      "definition": "DOLLARFR(decimal_dollar, fraction)",
+      "output": "DOLLARFR(1.125,16) -> 1.02"
+    },
+    {
+      "name": "DPRODUCT",
+      "category": "Database",
+      "description": "Multiplies the values in a particular field of records that match the criteria in a database",
+      "isDBFunction": true,
+      "definition": "DPRODUCT(field, criteria)",
+      "output": "DPRODUCT(DATA,>10) -> 100"
+    },
+    {
+      "name": "DROP",
+      "category": "Lookup and reference",
+      "description": "Excludes a specified number of rows or columns from the start or end of an array",
+      "isDBFunction": true,
+      "definition": "DROP(field, rows)",
+      "output": "DROP(DATA,2)"
+    },
+    {
+      "name": "DSTDEV",
+      "category": "Database",
+      "description": "Estimates the standard deviation based on a sample of selected database entries",
+      "isDBFunction": true,
+      "definition": "DSTDEV(field, criteria)",
+      "output": "DSTDEV(DATA,>10) -> 10"
+    },
+    {
+      "name": "DSTDEVP",
+      "category": "Database",
+      "description": "Calculates the standard deviation based on the entire population of selected database entries",
+      "isDBFunction": true,
+      "definition": "DSTDEVP(field, criteria)",
+      "output": "DSTDEVP(DATA,>10) -> 10"
+    },
+    {
+      "name": "DSUM",
+      "category": "Database",
+      "description": "Adds the numbers in the field column of records in the database that match the criteria",
+      "isDBFunction": true,
+      "definition": "DSUM(field, criteria)",
+      "output": "DSUM(DATA,>10) -> 100"
+    },
+    {
+      "name": "DURATION",
+      "category": "Financial",
+      "description": "Returns the annual duration of a security with periodic interest payments",
+      "isDBFunction": false,
+      "definition": "DURATION(settlement, maturity, coupon, yld, frequency, [basis]) \nDate Format : YYYY/MM/DD",
+      "output": "DURATION(2023/01/01,2024/01/01, 5.0, 3.5, 2, 1) -> 9.41"
+    },
+    {
+      "name": "DVAR",
+      "category": "Database",
+      "description": "Estimates variance based on a sample from selected database entries",
+      "isDBFunction": true,
+      "definition": "DVAR(field, criteria)",
+      "output": " DVAR(DATA,>10) -> 12.6"
+    },
+    {
+      "name": "DVARP",
+      "category": "Database",
+      "description": "Calculates variance based on the entire population of selected database entries",
+      "isDBFunction": true,
+      "definition": "DVARP(field, criteria)",
+      "output": "DVARP(DATA,>10) -> 12.6"
+    },
+    {
+      "name": "EDATE",
+      "category": "Date and time",
+      "description": "Returns the serial number of the date that is the indicated number of months before or after the start date",
+      "definition": "EDATE(start_date, months)\nDate Format : YYYY/MM/DD",
+      "output": "EDATE(2024/10/05,1) -> DateTime(2024,11,5)",
+      "isDBFunction": false
+    },
+    {
+      "name": "EFFECT",
+      "category": "Financial",
+      "description": "Returns the effective annual interest rate",
+      "isDBFunction": false,
+      "definition": "EFFECT(nominal_rate, npery)",
+      "output": "EFFECT(0.0525,4) -> 0.0535427"
+    },
+    {
+      "name": "ENCODEURL",
+      "category": "Web",
+      "description": "Returns a URL-encoded string This function is not available in Excel for the web.",
+      "isDBFunction": false,
+      "definition": "ENCODEURL(url) ",
+      "output": "encoded_url"
+    },
+    {
+      "name": "EOMONTH",
+      "category": "Date and time",
+      "description": "Returns the serial number of the last day of the month before or after a specified number of months",
+      "isDBFunction": false,
+      "definition": "EOMONTH(start_date, months)\nDate Format : YYYY/MM/DD",
+      "output": "EOMONTH(2023/01/01, 1)"
+    },
+    {
+      "name": "ERF",
+      "category": "Engineering",
+      "description": "Returns the error function",
+      "isDBFunction": false,
+      "definition": "ERF(lower_limit,[upper_limit])",
+      "output": "ERF(0.745) -> 0.70792892"
+    },
+    {
+      "name": "ERF.PRECISE",
+      "category": "Engineering",
+      "description": "Returns the error function",
+      "isDBFunction": false,
+      "definition": "ERF.PRECISE(lower_limit,[upper_limit])",
+      "output": "ERF.PRECISE(0.745) -> 0.70792892"
+    },
+    {
+      "name": "ERFC",
+      "category": "Engineering",
+      "description": "Returns the complementary error function",
+      "isDBFunction": false,
+      "definition": "ERFC(x)",
+      "output": "ERFC(1) -> 0.3227"
+    },
+    {
+      "name": "ERFC.PRECISE",
+      "category": "Engineering",
+      "description": "Returns the complementary ERF function integrated between x and infinity",
+      "isDBFunction": false,
+      "definition": "ERFC.PRECISE(x)",
+      "output": "ERFC.PRECISE(1) -> 0.3227"
+    },
+    {
+      "name": "ERROR.TYPE",
+      "category": "Information",
+      "description": "Returns a number corresponding to an error type",
+      "isDBFunction": false,
+      "definition": "ERROR.TYPE(error_val)",
+      "output": "ERROR.TYPE(#VALUE!) -> 3"
+    },
+    {
+      "name": "EUROCONVERT",
+      "category": "Add-in and Automation",
+      "description": "Converts a number to euros, converts a number from euros to a euro member currency, or converts a number from one euro member currency to another by using the euro as an intermediary (triangulation).",
+      "isDBFunction": false,
+      "definition": "EUROCONVERT(number,source,target,full_precision,triangulation_precision)",
+      "output": "EUROCONVERT(1.20,DEM,EUR) -> 0.61"
+    },
+    {
+      "name": "EVEN",
+      "category": "Math and trigonometry",
+      "description": "Rounds a number up to the nearest even integer",
+      "isDBFunction": false,
+      "definition": "EVEN(number)",
+      "output": "EVEN(1.5) -> 2"
+    },
+    {
+      "name": "EXACT",
+      "category": "Text",
+      "description": "Checks to see if two text values are identical",
+      "isDBFunction": false,
+      "definition": "EXACT(text1, text2)",
+      "output": "EXACT(hello, hello) -> true"
+    },
+    {
+      "name": "EXP",
+      "category": "Math and trigonometry",
+      "description": "Returns e raised to the power of a given number",
+      "isDBFunction": false,
+      "definition": "EXP(number)",
+      "output": "EXP(1) -> 2.71828183"
+    },
+    {
+      "name": "EXPAND",
+      "category": "Lookup and reference",
+      "description": "Expands or pads an array to specified row and column dimensions",
+      "isDBFunction": true,
+      "definition": "DVARP(field, rows, columns, [padWith])",
+      "output": "DVARP(DATA,2,2,N/A)"
+    },
+    {
+      "name": "EXPON.DIST",
+      "category": "Statistical",
+      "description": "Returns the exponential distribution",
+      "isDBFunction": false,
+      "definition": "EXPON.DIST(x,lambda,cumulative)",
+      "output": "EXPON.DIST(0.2,10,TRUE) -> 0.86466472"
+    },
+    {
+      "name": "EXPONDIST",
+      "category": "Compatibility",
+      "description": "Returns the exponential distribution",
+      "isDBFunction": false,
+      "definition": "EXPONDIST(x,lambda,cumulative)",
+      "output": "EXPONDIST(0.2,10,TRUE) -> 0.86466472"
+    },
+    {
+      "name": "FACT",
+      "category": "Math and trigonometry",
+      "description": "Returns the factorial of a number",
+      "isDBFunction": false,
+      "definition": "FACT(number)",
+      "output": "FACT(5) -> 120"
+    },
+    {
+      "name": "FACTDOUBLE",
+      "category": "Math and trigonometry",
+      "description": "Returns the double factorial of a number",
+      "isDBFunction": false,
+      "definition": "FACTDOUBLE(number)",
+      "output": "FACTDOUBLE(6) -> 48"
+    },
+    {
+      "name": "FALSE",
+      "category": "Logical",
+      "description": "Returns the logical value FALSE",
+      "isDBFunction": false,
+      "definition": "FALSE()",
+      "output": "FALSE"
+    },
+    {
+      "name": "F.DIST",
+      "category": "Statistical",
+      "description": "Returns the F probability distribution",
+      "isDBFunction": false,
+      "definition": "F.DIST(x,deg_freedom1,deg_freedom2,cumulative)",
+      "output": "F.DIST(15.2069,6,4,TRUE) -> 0.99"
+    },
+    {
+      "name": "FDIST",
+      "category": "Compatibility",
+      "description": "Returns the F probability distribution",
+      "isDBFunction": false,
+      "definition": "FDIST(x,deg_freedom1,deg_freedom2)",
+      "output": "FDIST(15.2069,6,4) -> 0.99"
+    },
+    {
+      "name": "F.DIST.RT",
+      "category": "Statistical",
+      "description": "Returns the F probability distribution",
+      "isDBFunction": false,
+      "definition": "F.DIST.RT(x,deg_freedom1,deg_freedom2)",
+      "output": "F.DIST.RT(15.2069,6,4) -> 0.99"
+    },
+    {
+      "name": "FILTER",
+      "category": "Lookup and reference",
+      "description": "Filters a range of data based on criteria you define",
+      "isDBFunction": true,
+      "definition": "DVARP(field, criteria)",
+      "output": "DVARP(DATA,>10)"
+    },
+    {
+      "name": "FIND",
+      "category": "Text",
+      "description": "Finds one text value within another (case-sensitive)",
+      "isDBFunction": false,
+      "definition": "FIND(find_text, within_text, [start_num])",
+      "output": "FIND(M, Marriam) -> 1"
+    },
+    {
+      "name": "FINDB",
+      "category": "Text",
+      "description": "Finds one text value within another (case-sensitive)",
+      "isDBFunction": false,
+      "definition": "FINDB(find_text, within_text, [start_num]) ",
+      "output": "FINDB(M, Marriam) -> 1"
+    },
+    {
+      "name": "F.INV",
+      "category": "Statistical",
+      "description": "Returns the inverse of the F probability distribution",
+      "isDBFunction": false,
+      "definition": "F.INV(probability,deg_freedom1,deg_freedom2) ",
+      "output": "F.INV(0.01,6,4) -> 0.10930991"
+    },
+    {
+      "name": "F.INV.RT",
+      "category": "Statistical",
+      "description": "Returns the inverse of the (right-tailed) F probability distribution",
+      "isDBFunction": false,
+      "definition": "F.INV.RT(probability,deg_freedom1,deg_freedom2)",
+      "output": "F.INV.RT(0.01,6,4) -> 0.10930991"
+    }
+  ]
+}
